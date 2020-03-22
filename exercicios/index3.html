@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução ao PHP</title>
+        <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+        <script>
+            function validar(){
+                var valor1 = form1.valor1.value;
+                var valor2 = form1.valor2.value;
+                var valor3 = form1.valor3.value;
+                var valor4 = form1.valor4.value;
+                var valor5 = form1.valor5.value;
+                var valor6 = form1.valor6.value;
+                var valor7 = form1.valor7.value;
+                var valor8 = form1.valor8.value;
+                var valor9 = form1.valor9.value;
+                var valor10 = form1.valor10.value;
+
+                if(valor1 != ""){
+                    valor1 = parseInt(valor1);
+                    document.getElementById("valor1").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor1").style.borderColor = "red";
+                    return false;
+                }
+                if(valor2 != ""){
+                    valor2 = parseInt(valor2);
+                    document.getElementById("valor2").style.borderColor = "white";
+                }else{
+                    alert ("Campo inválido");
+                    document.getElementById("valor2").style.borderColor = "red";
+                    return false;
+                }
+                if(valor3 != ""){
+                    valor3 = parseInt(valor3);
+                    document.getElementById("valor3").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor3").style.borderColor = "red";
+                    return false;
+                }
+                if(valor4 != ""){
+                    valor4 = parseInt(valor4);
+                    document.getElementById("valor4").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor4").style.borderColor = "red";
+                    return false;
+                }
+                if(valor5 != ""){
+                    valor5 = parseInt(valor5);
+                    document.getElementById("valor5").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor5").style.borderColor = "red";
+                    return false;
+                }
+                if(valor6 != ""){
+                    valor6 = parseInt(valor6);
+                    document.getElementById("valor6").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor6").style.borderColor = "red";
+                    return false;
+                }
+                if(valor7 != ""){
+                    valor7 = parseInt(valor7);
+                    document.getElementById("valor7").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor7").style.borderColor = "red";
+                    return false;
+                }
+                if(valor8 != ""){
+                    valor8 = parseInt(valor8);
+                    document.getElementById("valor8").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor8").style.borderColor = "red";
+                    return false;
+                }
+                if(valor9 != ""){
+                    valor9 = parseInt(valor9);
+                    document.getElementById("valor9").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor9").style.borderColor = "red";
+                    return false;
+                }
+                if(valor10 != ""){
+                    valor10 = parseInt(valor10);
+                    document.getElementById("valor10").style.borderColor = "white";
+                }else{
+                    alert ("O campo inválido");
+                    document.getElementById("valor10").style.borderColor = "red";
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </head>
+
+    <body>
+        <br><br>
+        <div class="container" align="center">
+            <form id="form1" method="POST" action="calculos.php">
+                <h2>Entre com os valores</h2>
+                <table width="290" weight="143" border="1" cellpandding="2" cellspacing="0">
+                    <tr>
+                        <td width="85">Valor 1:</td>
+                        <td width="199" align="center"><input type="text" name="valor1" id="valor1" autofocus></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 2:</td>
+                        <td width="199" align="center"><input type="text" name="valor2" id="valor2"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 3:</td>
+                        <td width="199" align="center"><input type="text" name="valor3" id="valor3"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 4:</td>
+                        <td width="199" align="center"><input type="text" name="valor4" id="valor4"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 5:</td>
+                        <td width="199" align="center"><input type="text" name="valor5" id="valor5"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 6:</td>
+                        <td width="199" align="center"><input type="text" name="valor6" id="valor6"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 7:</td>
+                        <td width="199" align="center"><input type="text" name="valor7" id="valor7"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 8:</td>
+                        <td width="199" align="center"><input type="text" name="valor8" id="valor8"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 9:</td>
+                        <td width="199" align="center"><input type="text" name="valor9" id="valor9"></td>
+                    </tr>
+                    <tr>
+                        <td width="85">Valor 10:</td>
+                        <td width="199" align="center"><input type="text" name="valor10" id="valor10"></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Calcular" onclick="return validar()">
+            </form>
+        </div>
+    </body>
+</html>
