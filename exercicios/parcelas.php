@@ -9,7 +9,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Introdução ao PHP</title>
-        <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
         <script>
             function voltar(){
                 document.location.href = "index2.html"
