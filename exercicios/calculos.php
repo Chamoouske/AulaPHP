@@ -21,7 +21,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Introdução ao PHP</title>
-        <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-reboot.min.css">
         <script>
             function voltar(){
                 document.location.href = "index3.html"
@@ -31,6 +31,7 @@
 
     <body>
         <br><br>
+        <?php print($maior); ?>
         <div class="container" align="center">
             <form id="form1" method="POST">
                 <table width="290" weight="143" border="1" cellpandding="2" cellspacing="0">
