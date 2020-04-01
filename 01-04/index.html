@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>TratorTec RH</title>
+        <script>
+
+            function validar(){
+                var numFilho    = form1.filhos.value;
+                var valorH      = form1.valorH.value;
+
+                if(numFilho == ''){
+                    document.getElementById('filhos').setAttribute('value', '0');
+                }
+
+                if(valorH == ''){
+                    document.getElementById('valorH').setAttribute('value', '0');
+                }
+            }
+
+            function trocarAction(){
+                document.getElementById('form1').setAttribute('action', 'imprime.php');
+                validar();
+            }
+        </script>
+    </head>
+
+    <body>
+        <form id="form1" method="POST" action="calcula.php" align="center">
+            <table width="290" weight="143" border="2" cellpandding="2" cellspacing="0" align="center">
+                <h2>Inserir Dados</h2>
+                <tr>
+                    <td width="85">Nome do funcionário:</td>
+                    <td width="199"><input type="text" name="nome" id="nome"></td>
+                </tr>
+                <tr>
+                    <td width="85">Horas trabalhadas:</td>
+                    <td width="199"><input type="text" name="horasT" id="horasT"></td>
+                </tr>
+                <tr>
+                    <td width="85">Valor por hora:</td>
+                    <td width="199"><input type="text" name="valorH" id="valorH"></td>
+                </tr>
+                <tr>
+                    <td width="85">Filhos com menos de 14 anos:</td>
+                    <td width="199"><input type="text" name="filhos" id="filhos"></td>
+                </tr>
+            </table><br>
+            <input type="submit" value="Calcular" onclick="return validar()">
+            <input type="submit" value="Imprimir" onclick="trocarAction()">
+        </form>
+    </body>
+</html>
