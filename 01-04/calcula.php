@@ -1,18 +1,18 @@
 <?php
-    $nome       = $_POST['nome'];
-    $horasT     = $_POST['horasT'];
-    $valorH     = $_POST['valorH'];
-    $numFilhos  = $_POST['filhos'];
+    $nome           = $_POST['nome'];
+    $horasT         = $_POST['horasT'];
+    $valorH         = $_POST['valorH'];
+    $numFilhos      = $_POST['filhos'];
 
     $salarioBruto   = $horasT * $valorH;
     $acrescimoFilho = $salarioBruto * (0.1 * $numFilhos);
     $salarioBruto   = $acrescimoFilho + $salarioBruto;
 
     $impostoRenda   = 0.2 * $salarioBruto;
-    $salarioBruto   -= $impostoRenda;
-    $inss           = 0.08 * $salarioBruto;
+    $inss           = 0.08 * ($salarioBruto - $impostoRenda);
+    $salarioLqd     = $salarioBruto - $impostoRenda;
 
-    $salarioLqd     = $salarioBruto - $inss;
+    $salarioLqd     = $salarioLqd - $inss;
 ?>
 
 <!DOCTYPE html>
